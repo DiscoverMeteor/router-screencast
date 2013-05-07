@@ -1,0 +1,40 @@
+<head>
+  <title>router-demo</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <a href="{{homePath}}">Home</a>
+  <a href="{{pageOneTemplatePath}}">Page One</a>
+  <a href="{{pageTwoTemplateUrl}}">Page Two</a>
+  <a href="{{postTemplatePath 126}}">Post</a>
+  
+  {{renderPage}}
+</template>
+
+<template name="homePageTemplateLoggedIn">
+  <h1>Welcome Home Friend!</h1>
+</template>
+
+<template name="homePageTemplateLoggedOut">
+  <h1>Hello there Stranger!</h1>
+</template>
+
+<template name="pageOneTemplate">
+  <h1>Welcome to page one</h1>
+</template>
+
+<template name="pageTwoTemplate">
+  <h1>Welcome to page two</h1>
+</template>
+
+<template name="postTemplate">
+  <h1>Your post is {{postId}}!</h1>
+</template>
+
+<template name="accessDenied">
+  <h1>ACCESS DENIED!!!</h1>
+</template>
